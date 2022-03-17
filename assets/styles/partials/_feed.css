@@ -1,0 +1,174 @@
+.feed {
+  @apply flex-col max-w-[600px] mt-0 mb-0 ml-[275px];
+  border-right: 1px solid rgb(77, 77, 77);
+  border-left: 1px solid rgb(77, 77, 77);
+  .tweet {
+    @apply flex;
+    @apply p-4;
+    border-bottom: 1px solid rgb(77, 77, 77);
+    .profile_pic {
+      @apply mr-3 min-w-fit;
+      img {
+        @apply h-12 rounded-full;
+        @apply flex items-center justify-center;
+      }
+    }
+    .tweet_content {
+      @apply flex-col w-full  pr-4;
+      .tweet_input {
+        @apply flex items-center pt-4 pb-4 w-full;
+        textarea {
+          @apply bg-transparent outline-none w-full;
+          @apply resize-none overflow-hidden;
+          @apply h-auto;
+        }
+      }
+      .media_button {
+        @apply flex justify-between items-center;
+        .meta_buttons {
+          @apply flex justify-center items-center;
+          .select_image {
+            @apply flex items-center justify-center;
+            @apply m-2;
+          }
+          .select_gif {
+            border: 2px solid gray;
+            padding-left: 1px;
+            padding-right: 1px;
+            @apply rounded-md flex items-center justify-center;
+          }
+        }
+        .button_holder {
+          @apply flex items-center justify-center ;
+            .counter_holder{
+                @apply flex items-center justify-center relative;
+                @apply mr-4;
+                svg {
+                    @apply w-[40px] h-[40px];
+                    @apply flex justify-center items-center;
+        
+                    circle{
+                        @apply stroke-[3px] translate-x-1 translate-y-1;
+                        stroke-dashoffset: 100;
+                        stroke-dasharray: 100;
+                    }
+        
+                    circle:nth-child(1) {
+                      stroke-dashoffset: 0;
+                      @apply stroke-gray-200 opacity-20;
+                    }
+                    circle:nth-child(2) {
+                      stroke-dashoffset: 70;
+                      @apply stroke-blue-500;
+                    }
+                  }
+                  .counter {
+                    @apply text-sm;
+                    @apply absolute top-0 left-0;
+                    @apply flex items-center justify-center;
+                    @apply w-full h-full;
+
+                    &.pass{
+                        @apply text-red-500;
+                    }
+                  }
+            }
+          
+          
+          .tweet_button {
+            @apply bg-blue-500 rounded-full pt-2 pb-2 pr-6 pl-6;
+            @apply flex justify-center items-center;
+            &.desactivated {
+              @apply opacity-50;
+              @apply pointer-events-none;
+              
+            }
+            button {
+            }
+          }
+        }
+      }
+    }
+  }
+  .tweet_strings {
+    @apply flex-col;
+    .tweet_string {
+      @apply flex p-4;
+      //border-bottom: 1px solid rgb(77, 77, 77);
+      @apply border-b-[1px] border-[#4d4d4d];
+      .profile_pic {
+        @apply mr-3 min-w-fit;
+        img {
+          @apply h-12 rounded-full;
+          @apply flex items-center justify-center;
+        }
+      }
+      .tweet_meta_content {
+        @apply w-full;
+        word-break: break-word;
+        .user_info {
+          @apply flex items-center;
+          .user_name {
+            @apply mr-2;
+            @apply text-sm font-bold;
+          }
+          .user_link {
+            @apply mr-2;
+            @apply text-sm font-thin text-gray-500;
+          }
+          .dot_icon {
+            @apply mr-2;
+            @apply text-sm font-thin text-gray-500;
+          }
+          .tweet_time {
+            @apply text-sm font-thin text-gray-500;
+          }
+        }
+      }
+      .tweet_content {
+        @apply flex-col w-full pr-4;
+        .tweet_info {
+        }
+        .tweet_media {
+          img {
+            @apply rounded-3xl max-w-full mb-6 mt-3;
+          }
+        }
+        .interact {
+          @apply flex justify-between items-center pr-24 mt-2;
+          .comment {
+            @apply flex justify-between items-center;
+            span {
+              @apply text-xs font-thin text-gray-500;
+              @apply ml-2;
+            }
+          }
+          .fav {
+            @apply flex justify-between items-center;
+            span {
+              @apply text-xs font-thin text-gray-500;
+              @apply ml-2;
+            }
+          }
+          .retweet {
+            @apply flex justify-between items-center;
+            span {
+              @apply text-xs font-thin text-gray-500;
+              @apply ml-2;
+            }
+          }
+          .share {
+            @apply flex justify-between items-center;
+            span {
+              @apply text-xs font-thin text-gray-500;
+              @apply ml-2;
+            }
+            .ph-export {
+              @apply text-gray-500;
+            }
+          }
+        }
+      }
+    }
+  }
+}

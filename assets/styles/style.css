@@ -1,0 +1,97 @@
+@import "lib/vars.css";
+@import "lib/mixins.css";
+@import "lib/fontface.css";
+@import "partials/_feed.css";
+@import "partials/_menu.css";
+
+* {
+  //border: 1px solid tomato;
+}
+
+html,
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: white;
+  @apply bg-black;
+  min-height: 100vh;
+  font-family: $font_family_base;
+}
+
+.twitter {
+  min-height: 100vh;
+  max-width: 1250px;
+  margin: 0 auto;
+
+  .content_block{
+    @apply flex;
+    .feed {
+      .home {
+        @apply flex justify-between items-center pr-4 pl-4; 
+        span{
+          @apply flex justify-between items-center;
+          @apply text-xl font-bold;
+        }
+        img{
+          @apply flex justify-between items-center h-5 w-auto;
+        }
+      }
+    }
+    .trend_block{
+      @apply min-w-[400px];
+      .searchbar {
+        @apply flex items-center;
+        @apply bg-gray-800 rounded-full ml-4 mt-2 mr-4;
+        .search_icon{
+          @apply pl-4;
+        }
+        .searchbar_input{
+          @apply p-2;
+          input{
+            @apply bg-transparent outline-none;
+          }
+        }
+      }
+      .trending {
+        @apply bg-gray-800 h-fit rounded-xl m-4;
+        h1{
+          @apply p-4;
+          @apply text-xl font-bold;
+        }
+        .trending_topics{
+          .trending_topic{
+            @apply p-4;
+            @apply flex items-center;
+            img{
+              @apply mr-2;
+            }
+            span{
+    
+            }
+            
+          }
+        }
+      }
+    }
+  }
+  
+ 
+}
+.menu {
+  @apply flex-col justify-between;
+  .menu_items {
+    
+    .menu_item {
+      @apply p-4;
+    }
+    .tweet{
+      @apply flex justify-center items-center;
+      @apply bg-blue-500 rounded-full h-12 mt-2 mb-2;
+      width: 225px;
+    }
+    .profile{
+
+    }
+  }
+  
+}

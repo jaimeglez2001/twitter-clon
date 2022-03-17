@@ -1,0 +1,76 @@
+.menu {
+  @apply fixed flex justify-between pr-2 pl-2;
+  @apply w-[250px] h-[100vh];
+  .menu_holder {
+    .logo {
+      @apply p-4 pl-6;
+    }
+    .menu_items {
+      .menu_item {
+        @apply flex items-center;
+        @apply pt-4 pl-4;
+        .icon_holder {
+          @apply flex justify-center items-center w-8 mr-4;
+          img {
+            @apply flex items-center justify-center;
+            @apply w-6;
+          }
+          .ph-bookmark-simple {
+            @apply flex items-center justify-center;
+            @apply text-3xl text-gray-300;
+          }
+          .ph-list {
+            @apply flex items-center justify-center;
+            @apply text-3xl text-gray-300;
+          }
+          .ph-dots-three-circle {
+            @apply flex items-center justify-center;
+            @apply text-3xl text-gray-300;
+          }
+          .ph-list {
+            @apply flex items-center justify-center;
+            @apply text-3xl text-gray-300;
+          }
+          span {
+            @apply ml-3;
+            @apply text-2xl;
+          }
+        }
+      }
+    }
+    .menu_tweet_button {
+      @apply bg-blue-500 rounded-full pt-4 pb-4 w-full;
+      @apply flex justify-center items-center;
+      span {
+        @apply font-bold;
+      }
+    }
+  }
+
+  .profile {
+    @apply flex items-center;
+    @apply pt-2 pb-2 pr-4 pl-4 mb-4;
+    .prof_pic {
+      @apply min-w-[40px];
+      img {
+        @apply w-24 h-auto rounded-full;
+      }
+    }
+    .profile_metadata {
+      @apply flex justify-between items-center justify-center;
+      @apply flex w-full pl-4;
+      .prof_info {
+        min-width: 150px;
+        .profile_name {
+          @apply text-sm font-bold;
+        }
+        .profile_link {
+          @apply text-sm text-gray-500;
+        }
+      }
+      .profile_options {
+        @apply flex items-center justify-end;
+      }
+    }
+  }
+}
