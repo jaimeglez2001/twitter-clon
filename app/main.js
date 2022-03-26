@@ -285,6 +285,8 @@ const renderTweetString = (data = mockData) => {
 
 
 
+
+
 const searchInput = document.querySelector(".searchbar_input input");
 
 const initSearchEvents = () => {
@@ -296,9 +298,27 @@ const initSearchEvents = () => {
         filterData = mockData.filter((d) => {
           return d.tweet_text.includes(searchInputValue);
         });
-        if(filter){
+        if(filterData.length > 0){
           renderTweetString(filterData);
-
+        }else{
+          const renderError = () => {
+            const feedBlock = document.querySelector(".tweet_strings");
+            let tweetString = "";
+              tweetString += `
+              <div class="error_message">
+              <h1>No results for "${searchInputValue}"</h1>
+              <span>
+                The term you entered did not bring up any results. You may have
+                mistyped your term or your Search settings could be protecting
+                you from some potentially sensitive content.
+                </span>
+            </div>
+                        `;
+          
+              feedBlock.innerHTML = tweetString;
+          };
+          
+          renderError();
         }
     } else {
       renderTweetString();

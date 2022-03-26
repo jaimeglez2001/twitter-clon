@@ -1,7 +1,8 @@
 .feed {
-  @apply flex-col max-w-[600px] mt-0 mb-0 ml-[275px];
+  @apply flex-col w-[600px] mt-0 mb-0 ml-[275px];
   border-right: 1px solid rgb(77, 77, 77);
   border-left: 1px solid rgb(77, 77, 77);
+  @apply min-h-[100vh];
   .tweet {
     @apply flex;
     @apply p-4;
@@ -91,7 +92,18 @@
     }
   }
   .tweet_strings {
-    @apply flex-col;
+    @apply flex-col justify-center;
+    .error_message{
+      @apply pt-12 flex flex-col justify-center;
+      @apply w-[300px] m-auto;
+      h1{
+        @apply m-0 text-3xl font-bold mb-4;
+        word-break: break-word;
+      }
+      span{
+        @apply text-sm;
+      }
+    }
     .tweet_string {
       @apply flex p-4;
       //border-bottom: 1px solid rgb(77, 77, 77);
